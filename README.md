@@ -1,5 +1,7 @@
 # liquidctl [Prometheus][2] exporter
 
+## Forked from https://github.com/paha/liquidctl-exporter so i can add a GHCR Docker package!
+
 Collects metrics from [liquidctl][1] supported devices and presents them for scraping
 
 
@@ -78,9 +80,7 @@ version: "3.8"
 
 services:
   liquidctl-exporter:
-    build:
-      context: ./exporters/liquidctl-exporter
-    image: liquidctl-exporter
+    image: ghcr.io/fma965/liquidctl-exporter
     container_name: liquidctl-exporter
     ports:
       - "9530:9530"
